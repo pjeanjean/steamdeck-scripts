@@ -1,0 +1,11 @@
+[Unit]
+Description=Post Deck update configuration
+Requires=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/etc/systemd/system/post-update.sh
+
+[Install]
+WantedBy=multi-user.target
